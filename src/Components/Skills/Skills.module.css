@@ -1,0 +1,24 @@
+.skillsBlock {
+    padding: 60px 0;
+    background-color: #4fbb7c;
+}
+
+.skillsContainer {
+    /*flex-direction: column;*/
+    justify-content: flex-start;
+}
+
+.aboutBlockTitle {
+    text-align: center;
+    margin: 0 auto 40px;
+    background-color: #cecbcb;
+    max-width: 350px;
+}
+
+.skills {
+    border: 1px solid black;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

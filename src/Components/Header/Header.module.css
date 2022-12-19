@@ -1,0 +1,11 @@
+.header {
+    height: 80px;
+    background-color: lightskyblue;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.container {
+    flex-direction: row-reverse;
+}
