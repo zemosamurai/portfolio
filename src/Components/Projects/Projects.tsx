@@ -9,9 +9,7 @@ export const Projects = () => {
             <div className={`${styleContainer.container} ${s.container}`}>
                 <div className={s.aboutBlockTitle}>
                     <span>Projects</span>
-                    <h2>
-                        Projects I have Worked On
-                    </h2>
+                    <h2>Projects I have Worked On</h2>
                 </div>
                 <div className={s.projects}>
                     <Project/>

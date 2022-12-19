@@ -8,11 +8,19 @@
 }
 
 .icon {
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 100%;
     background-color: #a8a8a8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .description {
 
+}
+
+.imgBtn {
+    padding: 10px;
+    background-color: #868585;
 }

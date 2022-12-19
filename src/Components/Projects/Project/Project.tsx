@@ -6,7 +6,9 @@ export const Project = () => {
 
     return (
         <div className={s.project}>
-            <div className={s.icon}></div>
+            <div className={s.icon}>
+                <a href="#" className={s.imgBtn}>View Details</a>
+            </div>
             <h3>New Title Props</h3>
             <div className={s.description}>{description}</div>
         </div>
