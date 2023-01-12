@@ -1,17 +1,16 @@
 import React from 'react';
-import s from './Skill.module.css'
+import s from './Skill.module.scss'
 
 type SkillPropsType = {
     title: string
-    description: string
+    img: string
 }
 
-export const Skill = (props: SkillPropsType) => {
+export const Skill = ({title, img}: SkillPropsType) => {
     return (
         <div className={s.skill}>
-            <div className={s.icon}></div>
-            <h3>{props.title}</h3>
-            <span className={s.description}>{props.description}</span>
+            <div className={s.icon}><img src={img} alt="image"/></div>
+            <h3 className={s.title}>{title}</h3>
         </div>
     );
 };
