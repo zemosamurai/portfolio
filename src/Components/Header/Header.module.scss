@@ -1,0 +1,15 @@
+@import '../../common/styles/sass/variables';
+@import '../../common/styles/sass/mixins';
+
+.header {
+  height: 70px;
+  //background-color: $bgMainColor;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  .container {
+    flex-direction: row-reverse;
+  }
+}
+

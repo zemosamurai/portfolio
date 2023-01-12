@@ -1,0 +1,30 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+.skill {
+  width: 240px;
+  height: 160px;
+  background-color: $bgSecondColor;
+  display: flex;
+  row-gap: 5px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+
+  .icon {
+    & img {
+      height: 50px;
+      width: 100%;
+    }
+  }
+  .title {
+    @include poppinsText(33px, 500, $mainTextColor)
+  }
+
+  .description {
+
+  }
+}
+
+

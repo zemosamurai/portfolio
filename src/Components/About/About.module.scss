@@ -1,0 +1,76 @@
+@import '../../common/styles/sass/variables';
+@import '../../common/styles/sass/mixins';
+
+.aboutBlock {
+  padding: 60px 0;
+  //background-color: #bb78c7;
+
+  .container {
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    .wrapper {
+      margin-top: 75px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .photo {
+        border-radius: 15px;
+        width: 400px;
+        height: 501px;
+        background-color: #868585;
+      }
+
+      .aboutMe {
+        width: 500px;
+        //background-color: #cecbcb;
+
+        & .title {
+          margin-bottom: 20px;
+          @include poppinsText(30px, 600, $mainTextColor)
+        }
+
+        & .text {
+          @include openSansText(16px, 400, $textColor);
+          line-height: 30px;
+        }
+
+        .list {
+          margin-top: 32px;
+          display: flex;
+          justify-content: space-around;
+          border: 2px solid #625a7d;
+          border-radius: 10px;
+          flex-wrap: wrap;
+
+          .listUL {
+            padding: 25px 35px;
+            list-style-type: none;
+            //border: 2px solid white;
+
+            & li {
+              margin-bottom: 7px;
+
+              & span {
+                @include poppinsText(16px, 500, $mainTextColor);
+                line-height: 30px;
+              }
+
+              & p {
+                @include openSansText(16px, 400, $textColor);
+                line-height: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+

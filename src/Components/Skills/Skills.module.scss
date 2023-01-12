@@ -1,0 +1,21 @@
+.skillsBlock {
+  padding: 60px 0;
+  //background-color: #4fbb7c;
+
+  .skillsContainer {
+    justify-content: flex-start;
+
+    .skills {
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      row-gap: 20px;
+      border: 1px solid black;
+      width: 100%;
+    }
+  }
+}
+
+
+

@@ -1,0 +1,23 @@
+@import '../../common/styles/sass/variables';
+@import '../../common/styles/sass/mixins';
+
+
+.nav {
+  border: 1px solid;
+  width: 360px;
+  display: flex;
+  justify-content: space-between;
+
+  & a {
+    text-decoration: none;
+    @include openSansText(16px, 400, $mainTextColor);
+
+  }
+  a:hover {
+    color: $primaryColor;
+  }
+}
+
+
+
+

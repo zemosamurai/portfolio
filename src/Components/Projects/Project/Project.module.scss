@@ -59,8 +59,9 @@
     }
 
     .description {
-      line-height: 1.6;
+      line-height: 30px;
       @include openSansText(16px, 400, $mainTextColor);
+
     }
   }
 }

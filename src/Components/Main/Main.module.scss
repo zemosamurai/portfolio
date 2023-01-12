@@ -1,0 +1,44 @@
+@import '../../common/styles/sass/variables.scss';
+@import '../../common/styles/sass/mixins.scss';
+
+.mainBlock {
+  height: 100vh;
+  //background-color: palevioletred;
+
+  .text {
+    //width: 300px;
+    //background-color: #cecbcb;
+    .name {
+      margin-bottom: 14px;
+      @include poppinsText(75px, 600, $mainTextColor);
+      line-height: 1.1;
+      & span {
+        color: $primaryColor;
+      }
+    }
+    .description {
+      margin-bottom: 35px;
+      @include poppinsText(20px, 500, $mainTextColor);
+    }
+    .btn {
+      padding: 15px 40px;
+      background-color: $primaryColor;
+      border-radius: 50px;
+      @include poppinsText(16px, 400, $mainTextColor);
+    }
+    .btn:hover {
+      color: black;
+      background-color: #fff;
+    }
+  }
+
+  .photo {
+    width: 400px;
+    height: 400px;
+    background-color: #868585;
+  }
+
+}
+
+
+
