@@ -1,22 +1,30 @@
 import React from 'react';
-import s from './Skills.module.css'
+import s from './Skills.module.scss'
 import styleContainer from '../../common/styles/Container.module.css'
 import {Skill} from "./Skill/Skill";
+import {Title} from "../../common/commonComponents/Title/Title";
 
-export const Skills = () => {
-    const description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim...'
+type SkillType = {
+    id: string
+    title: string
+    img: string
+}
+type SkillsPropsType = {
+    skillsArr: Array<SkillType>
+}
+
+export const Skills = ({skillsArr}: SkillsPropsType) => {
+    const titleFromTitle = 'Skills'
+    const textFromTitle = 'I Work Hard to Improve My Skills Regularly'
 
     return (
         <div className={s.skillsBlock}>
             <div className={`${styleContainer.container} ${s.skillsContainer}`}>
-                <div className={s.aboutBlockTitle}>
-                    <span>Skills</span>
-                    <h2>I Work Hard to Improve My Skills Regularly</h2>
-                </div>
+                <Title title={titleFromTitle} text={textFromTitle}/>
                 <div className={s.skills}>
-                    <Skill title={'js'} description={description}/>
-                    <Skill title={'css'} description={description}/>
-                    <Skill title={'react'} description={description}/>
+                    {skillsArr.map(el => {
+                        return <Skill key={el.id} title={el.title} img={el.img}/>
+                    })}
                 </div>
             </div>
         </div>
