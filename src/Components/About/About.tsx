@@ -1,24 +1,22 @@
 import React from 'react';
-import s from './About.module.css'
+import s from './About.module.scss'
 import styleContainer from '../../common/styles/Container.module.css'
+import {Title} from "../../common/commonComponents/Title/Title";
 
 export const About = () => {
-    const text = 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occae cat cupidatat non proident, sunt in culpa qui officia dese runt mollit anim id est laborum velit esse cillum dolore eu fugiat.'
+    const titleFromTitle = 'About Me'
+    const textFromTitle = 'A Passionate Developer Who Loves to Code'
+    const text = 'I’d describe myself as a goal-oriented and hardworking person with experience in creating SPA, usingReact(JS/TS), Redux, HTML & CSS. Now I am improving my skills in this direction and expanding them with new technologies. In the future, I would like to become a full-stack developer.'
 
     return (
         <div className={s.aboutBlock}>
             <div className={`${styleContainer.container} ${s.container}`}>
-                <div className={s.aboutBlockTitle}>
-                    <span>About Me</span>
-                    <h2>
-                        A Passionate Developer Who Loves to Code
-                    </h2>
-                </div>
+                <Title title={titleFromTitle} text={textFromTitle}/>
                 <div className={s.wrapper}>
                     <div className={s.photo}></div>
                     <div className={s.aboutMe}>
-                        <h3>About Me</h3>
-                        <p>{text}</p>
+                        <h3 className={s.title}>About Me</h3>
+                        <p className={s.text}>{text}</p>
                         <div className={s.list}>
                             <ul className={s.listUL}>
                                 <li>
