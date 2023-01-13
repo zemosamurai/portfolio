@@ -1,16 +1,22 @@
 import React from 'react';
-import s from './Project.module.css'
+import s from './Project.module.scss'
 
-export const Project = () => {
-    const description = 'Kobita tumi sopno charini hoye ersest labo met, consectetur adipi ctetur adipisicing eod tempor'
+type ProjectPropsType = {
+    title: string
+    description: string
+    style: {backgroundImage: string}
+}
 
+export const Project = ({title, description, style}: ProjectPropsType) => {
     return (
         <div className={s.project}>
-            <div className={s.icon}>
+            <div className={s.icon} style={style}>
                 <a href="#" className={s.imgBtn}>View Details</a>
             </div>
-            <h3>New Title Props</h3>
-            <div className={s.description}>{description}</div>
+            <div className={s.content}>
+                <h4 className={s.projectTitle}>{title}</h4>
+                <div className={s.description}>{description}</div>
+            </div>
         </div>
     );
 };
