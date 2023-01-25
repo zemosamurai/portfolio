@@ -18,10 +18,11 @@
       flex-wrap: wrap;
 
       .photo {
-        border-radius: 15px;
-        width: 400px;
-        height: 501px;
-        background-color: #868585;
+        img {
+          width: 400px;
+          height: 501px;
+          border-radius: 15px;
+        }
       }
 
       .aboutMe {
