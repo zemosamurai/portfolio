@@ -18,6 +18,10 @@ import figma from "../assets/image/imgFromSkills/figma.svg";
 import todoImg from "../assets/image/imgProjects/todo.jpg";
 import socialImg from "../assets/image/imgProjects/social.jpg";
 import counterImg from "../assets/image/imgProjects/counter.png";
+import githubIcon from '../assets/image/icons/github.svg'
+import linkedInIcon from '../assets/image/icons/linkedin-svgrepo-com.svg'
+import telegramIcon from '../assets/image/icons/telegram-alt-svgrepo-com.svg'
+import gmailIcon from '../assets/image/icons/gmail-svgrepo-com.svg'
 
 export const initialState: InitialStateType = {
     main: {
@@ -150,7 +154,13 @@ export const initialState: InitialStateType = {
     contact: {
         title: 'Contact',
         description: 'I Want to Hear from You'
-    }
+    },
+    footer: [
+        {backgroundImage: `url(${githubIcon})`},
+        {backgroundImage: `url(${gmailIcon})`},
+        {backgroundImage: `url(${telegramIcon})`},
+        {backgroundImage: `url(${linkedInIcon})`},
+    ]
 }
 
 
@@ -192,6 +202,9 @@ export type ContactsType = {
     title: string
     description: string
 }
+export type FooterType = {
+    backgroundImage: string
+}
 
 type InitialStateType = {
     main: MainType
@@ -199,4 +212,5 @@ type InitialStateType = {
     about: AboutType
     projects: ProjectsType
     contact: ContactsType
+    footer: FooterType[]
 }
