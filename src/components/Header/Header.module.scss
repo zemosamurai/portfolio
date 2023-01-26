@@ -9,7 +9,28 @@
   align-items: center;
 
   .container {
-    flex-direction: row-reverse;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .slash {
+    margin-left: 22px;
+    margin-right: 22px;
+    color: $primaryColor;
+    font-size: 18px;
+  }
+
+  .wrapper {
+    border: 1px solid black;
+    display: flex;
+    column-gap: 22px;
+
+    .icon {
+      width: 20px;
+      height: 20px;
+      background-size: cover;
+      background-position: center;
+    }
   }
 }
 

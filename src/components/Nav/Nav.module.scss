@@ -4,9 +4,9 @@
 
 .nav {
   border: 1px solid;
-  width: 360px;
   display: flex;
   justify-content: space-between;
+  column-gap: 30px;
 
   & a {
     text-decoration: none;

@@ -1,0 +1,32 @@
+@import "../../common/styles/sass/variables";
+@import "../../common/styles/sass/mixins";
+
+.footerBlock {
+  padding: 20px 0;
+
+  .container {
+    flex-direction: column;
+    @include openSansText(14px, 400, $textColor);
+    .title {
+      margin-bottom: 20px;
+    }
+    .wrapper {
+      border: 1px solid black;
+      display: flex;
+      column-gap: 30px;
+      margin-bottom: 20px;
+
+      .icon {
+        width: 30px;
+        height: 30px;
+        background-size: cover;
+        background-position: center;
+      }
+    }
+  }
+}
+
+
+
+
+

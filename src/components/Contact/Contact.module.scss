@@ -1,0 +1,59 @@
+@import "../../common/styles/sass/variables";
+@import "../../common/styles/sass/mixins";
+
+.contactBlock {
+  padding: 60px 0;
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    .formBlock {
+      margin-top: 60px;
+      border: 1px solid black;
+      display: flex;
+      flex-direction: column;
+      row-gap: 26px;
+      width: 100%;
+      max-width: 500px;
+
+      & input {
+        padding: 16px 30px 30px 30px !important;
+        background-color: transparent;
+        border: 1px solid rgba(255, 255, 255, .3);
+        border-radius: 8px;
+        @include openSansText(18px, 400, $mainTextColor);
+      }
+    }
+
+    & textarea {
+      padding: 16px 30px 30px 30px !important;
+      background-color: transparent;
+      border: 1px solid rgba(255, 255, 255, .3);
+      height: 150px;
+      resize: none;
+      border-radius: 8px;
+      @include openSansText(18px, 400, $mainTextColor);
+    }
+
+    & input.btn {
+      padding: 18px !important;
+      background-color: $primaryColor;
+      border-radius: 60px;
+      @include openSansText(18px, 500, $mainTextColor);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
