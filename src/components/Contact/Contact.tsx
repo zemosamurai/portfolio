@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './Contact.module.css'
+import s from './Contact.module.scss'
 import styleContainer from '../../common/styles/Container.module.css'
 import {Title} from "../../common/commonComponents/Title/Title";
 import {initialState} from "../../bll/appData";
@@ -15,7 +15,7 @@ export const Contact = () => {
                     <input placeholder="Your Name" type="text" name="first_name"/>
                     <input placeholder="Your E-mail" type="email" name="email"/>
                     <textarea placeholder="Write your message here" name="textarea"/>
-                    <input type="submit" value="Submit Now"/>
+                    <input type="submit" value="Submit Now" className={s.btn}/>
                 </form>
             </div>
         </div>
