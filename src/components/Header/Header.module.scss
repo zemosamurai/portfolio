@@ -2,35 +2,45 @@
 @import '../../common/styles/sass/mixins';
 
 .header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #1e1345;
   height: 70px;
-  //background-color: $bgMainColor;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  z-index: 2;
 
   .container {
     display: flex;
     justify-content: flex-end;
-  }
 
-  .slash {
-    margin-left: 22px;
-    margin-right: 22px;
-    color: $primaryColor;
-    font-size: 18px;
-  }
+    .slash {
+      margin-left: 22px;
+      margin-right: 22px;
+      color: $primaryColor;
+      font-size: 18px;
+    }
 
-  .wrapper {
-    border: 1px solid black;
-    display: flex;
-    column-gap: 22px;
+    .wrapperIcon {
+      border: 1px solid black;
+      display: flex;
+      column-gap: 22px;
+      //@media screen and (max-width: 750px){
+      //  display: none;
+      //}
 
-    .icon {
-      width: 20px;
-      height: 20px;
-      background-size: cover;
-      background-position: center;
+      .icon {
+        width: 20px;
+        height: 20px;
+        background-size: cover;
+        background-position: center;
+      }
     }
   }
+
+
 }
 

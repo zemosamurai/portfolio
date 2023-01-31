@@ -3,40 +3,64 @@
 
 .mainBlock {
   height: 100vh;
-  //background-color: palevioletred;
 
-  .text {
-    //width: 300px;
-    //background-color: #cecbcb;
-    .name {
-      margin-bottom: 14px;
-      @include poppinsText(75px, 600, $mainTextColor);
-      line-height: 1.1;
-      & span {
-        color: $primaryColor;
+  .container {
+    @media screen and (max-width: 1000px) {
+      flex-direction: column-reverse;
+      justify-content: center;
+      row-gap: 40px;
+      text-align: center;
+    }
+
+    .text {
+      .name {
+        margin-bottom: 14px;
+        @include poppinsText(75px, 600, $mainTextColor);
+        line-height: 1.1;
+        @media screen and (max-width: 1200px) {
+          font-size: 65px;
+        }
+        @media screen and (max-width: 600px) {
+          font-size: 55px;
+        }
+
+        & span {
+          color: $primaryColor;
+        }
+      }
+
+      .description {
+        margin-bottom: 35px;
+        @include poppinsText(20px, 500, $mainTextColor);
+      }
+
+      .btn {
+        padding: 17px 40px;
+        background-color: $primaryColor;
+        border-radius: 50px;
+        @include poppinsText(16px, 400, $mainTextColor);
+      }
+
+      .btn:hover {
+        color: black;
+        background-color: #fff;
       }
     }
-    .description {
-      margin-bottom: 35px;
-      @include poppinsText(20px, 500, $mainTextColor);
-    }
-    .btn {
-      padding: 17px 40px;
-      background-color: $primaryColor;
-      border-radius: 50px;
-      @include poppinsText(16px, 400, $mainTextColor);
-    }
-    .btn:hover {
-      color: black;
-      background-color: #fff;
+
+    .photo {
+      img {
+        width: 400px;
+        @media screen and (max-width: 1200px) {
+          max-width: 320px;
+        }
+        @media screen and (max-width: 420px) {
+          max-width: 260px;
+        }
+      }
     }
   }
-
-  .photo {
-    width: 400px;
-  }
-
 }
+
 
 
 
