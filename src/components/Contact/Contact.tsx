@@ -8,7 +8,7 @@ export const Contact = () => {
     const contactData = initialState.contact
 
     return (
-        <div className={s.contactBlock}>
+        <div className={s.contactBlock} id={'contact'}>
             <div className={`${styleContainer.container} ${s.container}`}>
                 <Title title={contactData.title} text={contactData.description}/>
                 <form className={s.formBlock} name="email_form">

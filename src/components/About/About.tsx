@@ -9,7 +9,7 @@ export const About = () => {
     const aboutData = initialState.about
 
     return (
-        <div className={s.aboutBlock}>
+        <div className={s.aboutBlock} id={'about'}>
             <div className={`${styleContainer.container} ${s.container}`}>
                 <Title title={aboutData.title} text={aboutData.description}/>
                 <div className={s.wrapper}>

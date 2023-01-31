@@ -4,7 +4,7 @@ import styleContainer from "../../common/styles/Container.module.css";
 import {initialState} from "../../bll/appData";
 
 export const Footer = () => {
-    const footerData = initialState.footer
+    const footerData = initialState.headerFooterIcons
 
     return (
         <div className={s.footerBlock}>

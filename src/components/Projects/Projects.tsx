@@ -9,7 +9,7 @@ export const Projects = () => {
     const projectsData = initialState.projects
 
     return (
-        <div className={s.projectsBlock}>
+        <div className={s.projectsBlock} id={'projects'}>
             <div className={`${styleContainer.container} ${s.container}`}>
                 <Title title={projectsData.title} text={projectsData.description}/>
                 <div className={s.projects}>

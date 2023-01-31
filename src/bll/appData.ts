@@ -155,11 +155,11 @@ export const initialState: InitialStateType = {
         title: 'Contact',
         description: 'I Want to Hear from You'
     },
-    footer: [
-        {backgroundImage: `url(${githubIcon})`},
-        {backgroundImage: `url(${gmailIcon})`},
-        {backgroundImage: `url(${telegramIcon})`},
-        {backgroundImage: `url(${linkedInIcon})`},
+    headerFooterIcons: [
+        {id: v1(), backgroundImage: `url(${githubIcon})`, path: 'https://github.com/zemosamurai'},
+        {id: v1(), backgroundImage: `url(${gmailIcon})`,  path: 'mailto:zemosamurai@gmail.com'},
+        {id: v1(), backgroundImage: `url(${telegramIcon})` , path: 'https://t.me/zemosamurai'},
+        {id: v1(), backgroundImage: `url(${linkedInIcon})` , path: '#'},
     ]
 }
 
@@ -203,7 +203,9 @@ export type ContactsType = {
     description: string
 }
 export type FooterType = {
+    id: string
     backgroundImage: string
+    path: string
 }
 
 type InitialStateType = {
@@ -212,5 +214,5 @@ type InitialStateType = {
     about: AboutType
     projects: ProjectsType
     contact: ContactsType
-    footer: FooterType[]
+    headerFooterIcons: FooterType[]
 }

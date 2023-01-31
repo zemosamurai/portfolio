@@ -8,8 +8,8 @@ export const Main = () => {
     const mainData = initialState.main
 
     return (
-        <div className={s.mainBlock}>
-            <div className={styleContainer.container}>
+        <div className={s.mainBlock} id={'main'}>
+            <div className={`${styleContainer.container} ${s.container}`}>
                 <div className={s.text}>
                     <h1 className={s.name}>{mainData.firstName} <span>{mainData.lastName}</span></h1>
                     <p className={s.description}>{mainData.description}</p>
