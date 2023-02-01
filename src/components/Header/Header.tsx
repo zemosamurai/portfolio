@@ -11,7 +11,7 @@ export const Header = () => {
     const [nav, setNav] = useState(false)
 
     return (
-        <div className={s.header}>
+        <div className={s.header} id={'header'}>
             <div className={`${styleContainer.container} ${s.container}`}>
                 <Nav active={nav} editActive={setNav}/>
 
@@ -23,7 +23,8 @@ export const Header = () => {
                         id={el.id}
                         path={el.path}
                         imgSrc={el}
-                        className={s.icon}/>)}
+                        className={s.icon}/>
+                    )}
                 </div>
 
                 <div className={s.mobileBtn} onClick={() => setNav(!nav)}>

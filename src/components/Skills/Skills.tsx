@@ -5,7 +5,6 @@ import {Skill} from "./Skill/Skill";
 import {Title} from "../../common/commonComponents/Title/Title";
 import {initialState} from "../../bll/appData";
 
-
 export const Skills = () => {
     const skillsData = initialState.skills
 
@@ -22,4 +21,6 @@ export const Skills = () => {
         </div>
     );
 };
+
+
 
