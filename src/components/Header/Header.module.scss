@@ -12,6 +12,7 @@
   justify-content: flex-end;
   align-items: center;
   z-index: 2;
+  transition: transform .1s linear;
 
   .container {
     display: flex;
@@ -54,4 +55,6 @@
 
   }
 }
+
+
 
