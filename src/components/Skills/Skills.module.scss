@@ -12,7 +12,11 @@
       row-gap: 20px;
       border: 1px solid black;
       width: 100%;
+
     }
+  }
+  @media screen and (max-width: 600px){
+      padding-bottom: 30px;
   }
 }
 
