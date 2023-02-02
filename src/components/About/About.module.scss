@@ -3,7 +3,6 @@
 
 .aboutBlock {
   padding: 60px 0;
-  //background-color: #bb78c7;
 
   .container {
     align-items: center;
@@ -97,7 +96,8 @@
       }
     }
   }
-  @media screen and (max-width: 600px){
+
+  @media screen and (max-width: 600px) {
     padding-bottom: 30px;
   }
 }

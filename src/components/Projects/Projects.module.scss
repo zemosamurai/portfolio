@@ -2,7 +2,6 @@
 
 .projectsBlock {
   padding: 60px 0;
-  //background-color: $bgMainColor;
 
   .container {
     align-items: center;
@@ -23,7 +22,8 @@
       }
     }
   }
-  @media screen and (max-width: 600px){
+
+  @media screen and (max-width: 600px) {
     padding-bottom: 30px;
   }
 }
