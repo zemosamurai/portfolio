@@ -3,10 +3,11 @@ import s from './Projects.module.scss'
 import styleContainer from '../../common/styles/Container.module.css'
 import {Project} from './Project/Project';
 import {Title} from '../../common/commonComponents/Title/Title';
-import {initialState} from "../../bll/appData";
+import {useAppSelector} from "../../bll/store";
+import {ProjectsType} from "../../bll/app-reducer";
 
 export const Projects = () => {
-    const projectsData = initialState.projects
+    const projectsData = useAppSelector<ProjectsType>(state => state.app.projects)
 
     return (
         <div className={s.projectsBlock} id={'projects'}>

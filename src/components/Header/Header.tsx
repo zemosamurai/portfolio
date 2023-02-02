@@ -4,10 +4,12 @@ import {Nav} from "../Nav/Nav";
 import styleContainer from "../../common/styles/Container.module.css";
 import {AiOutlineMenu, AiOutlineClose} from "react-icons/ai";
 import {Icon} from "../Icon/Icon";
-import {initialState} from "../../bll/appData";
+import { useAppSelector} from "../../bll/store";
+import {FooterType} from "../../bll/app-reducer";
+
 
 export const Header = () => {
-    const headerData = initialState.headerFooterIcons
+    const headerData = useAppSelector<FooterType[]>(state => state.app.headerFooterIcons)
     const [nav, setNav] = useState(false)
 
     return (

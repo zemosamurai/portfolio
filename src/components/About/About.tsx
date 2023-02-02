@@ -3,10 +3,11 @@ import s from './About.module.scss'
 import styleContainer from '../../common/styles/Container.module.css'
 import {Title} from "../../common/commonComponents/Title/Title";
 import myImage from '../../assets/image/imgAbout/main1.jpg'
-import {initialState} from "../../bll/appData";
+import {useAppSelector} from "../../bll/store";
+import {AboutType} from "../../bll/app-reducer";
 
 export const About = () => {
-    const aboutData = initialState.about
+    const aboutData = useAppSelector<AboutType>(state => state.app.about)
 
     return (
         <div className={s.aboutBlock} id={'about'}>

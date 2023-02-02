@@ -2,10 +2,11 @@ import React from 'react';
 import s from './Main.module.scss'
 import styleContainer from '../../common/styles/Container.module.css'
 import mainImg from '../../assets/image/imgMainPage/mainImg.png'
-import {initialState} from "../../bll/appData";
+import {useAppSelector} from "../../bll/store";
+import {MainType} from "../../bll/app-reducer";
 
 export const Main = () => {
-    const mainData = initialState.main
+    const mainData = useAppSelector<MainType>(state => state.app.main)
 
     return (
         <div className={s.mainBlock} id={'main'}>

@@ -3,10 +3,11 @@ import s from './Skills.module.scss'
 import styleContainer from '../../common/styles/Container.module.css'
 import {Skill} from "./Skill/Skill";
 import {Title} from "../../common/commonComponents/Title/Title";
-import {initialState} from "../../bll/appData";
+import {useAppSelector} from "../../bll/store";
+import {SkillsType} from "../../bll/app-reducer";
 
 export const Skills = () => {
-    const skillsData = initialState.skills
+    const skillsData = useAppSelector<SkillsType>(state => state.app.skills)
 
     return (
         <div className={s.skillsBlock} id={'skills'}>
