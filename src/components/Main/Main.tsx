@@ -14,7 +14,9 @@ export const Main = () => {
                 <div className={s.text}>
                     <h1 className={s.name}>{mainData.firstName} <span>{mainData.lastName}</span></h1>
                     <p className={s.description}>{mainData.description}</p>
-                    <button className={s.btn}>Get Connected</button>
+                    <a href='#contact'>
+                        <div className={s.btn}>Get Connected</div>
+                    </a>
                 </div>
                 <div className={s.photo}>
                     <img src={mainImg} alt="#"/>
