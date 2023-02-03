@@ -20,6 +20,7 @@ export const Projects = () => {
                             key={el.id}
                             title={el.title}
                             description={el.description}
+                            link={el.link}
                         />
                     })}
                 </div>

@@ -5,13 +5,14 @@ type ProjectPropsType = {
     title: string
     description: string
     style: {backgroundImage: string}
+    link: string
 }
 
-export const Project = ({title, description, style}: ProjectPropsType) => {
+export const Project = ({title, description, style, link}: ProjectPropsType) => {
     return (
         <div className={s.project}>
             <div className={s.icon} style={style}>
-                <a href="#" className={s.imgBtn}>View Details</a>
+                <a href={link} className={s.imgBtn}>View Details</a>
             </div>
             <div className={s.content}>
                 <h4 className={s.projectTitle}>{title}</h4>
