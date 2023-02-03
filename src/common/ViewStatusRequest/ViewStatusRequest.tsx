@@ -23,7 +23,7 @@ export const ViewStatusRequest = () => {
     };
 
     return (
-        <Snackbar open={!!requestStatus} autoHideDuration={6000} onClose={handleClose}>
+        <Snackbar open={!!requestStatus} autoHideDuration={3000} onClose={handleClose}>
             <Alert
                 onClose={handleClose}
                 severity={requestStatus === 'success' ? "success" : 'error'}
