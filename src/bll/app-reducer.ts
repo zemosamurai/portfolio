@@ -128,6 +128,7 @@ export const initialState: InitialStateType = {
             {
                 id: v1(),
                 title: 'To Do List',
+                link: '#',
                 description: 'Kobita tumi sopno charini hoye ersest labo met, consectetur adipi ctetur adipisicing eod tempor',
                 img: {
                     backgroundImage: `url(${todoImg})`
@@ -136,6 +137,7 @@ export const initialState: InitialStateType = {
             {
                 id: v1(),
                 title: 'Social Network',
+                link: '#',
                 description: 'Kobita tumi sopno charini hoye ersest labo met, consectetur adipi ctetur adipisicing eod tempor',
                 img: {
                     backgroundImage: `url(${socialImg})`,
@@ -144,6 +146,7 @@ export const initialState: InitialStateType = {
             {
                 id: v1(),
                 title: 'Counter',
+                link: '#',
                 description: 'Kobita tumi sopno charini hoye ersest labo met, consectetur adipi ctetur adipisicing eod tempor',
                 img: {
                     backgroundImage: `url(${counterImg})`,
@@ -208,6 +211,7 @@ export type AboutType = {
 export type ProjectType = {
     id: string,
     title: string,
+    link: string
     description: string,
     img: {
         backgroundImage: string
