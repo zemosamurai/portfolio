@@ -9,10 +9,35 @@
   z-index: 3;
 
   & a {
+    position: relative;
     text-decoration: none;
     @include openSansText(16px, 400, $mainTextColor);
 
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: -7px;
+      width: 0;
+      height: 2px; /* Высота линии */
+      background-color: $primaryColor; /* Цвет подчеркивания при исчезании линии*/
+      transition: width 0.5s; /* Время эффекта */
+    }
+
+    &:hover:after {
+      content: "";
+      width: 100%;
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      height: 2px; /* Высота линии */
+      background-color: $primaryColor; /* Цвет подчеркивания при появлении линии*/
+      transition: width 0.5s; /* Время эффекта */
+    }
   }
+
 
   a:hover {
     color: $primaryColor;

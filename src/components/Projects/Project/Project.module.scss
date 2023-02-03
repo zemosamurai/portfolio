@@ -34,6 +34,18 @@
       border-radius: 12px 12px 0 0;
     }
 
+    @keyframes bounce {
+      0%, 20%, 60%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-20px);
+      }
+      80% {
+        transform: translateY(-10px);
+      }
+    }
+
     .imgBtn {
       padding: 10px;
       position: relative;
@@ -46,8 +58,10 @@
 
       &:hover {
         opacity: 1;
+        animation: bounce 1s;
       }
     }
+
   }
 
   .content {
@@ -61,7 +75,6 @@
     .description {
       line-height: 30px;
       @include openSansText(16px, 400, $mainTextColor);
-
     }
   }
 }

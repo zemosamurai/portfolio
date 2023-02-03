@@ -34,16 +34,35 @@
         @include poppinsText(20px, 500, $mainTextColor);
       }
 
+      a {
+        text-decoration: none;
+      }
+
       .btn {
+        width: fit-content;
+        border: none;
         padding: 17px 40px;
         background-color: $primaryColor;
         border-radius: 50px;
         @include poppinsText(16px, 400, $mainTextColor);
       }
 
+      @keyframes bounce {
+        0%, 20%, 60%, 100% {
+          transform: translateY(0);
+        }
+
+        40% {
+          transform: translateY(-20px);
+        }
+
+        80% {
+          transform: translateY(-10px);
+        }
+      }
+
       .btn:hover {
-        color: black;
-        background-color: #fff;
+        animation: bounce 1s;
       }
     }
 
