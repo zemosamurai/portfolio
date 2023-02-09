@@ -19,9 +19,9 @@ import todoImg from "../assets/image/imgProjects/todo.jpg";
 import socialImg from "../assets/image/imgProjects/social.jpg";
 import counterImg from "../assets/image/imgProjects/counter.png";
 import githubIcon from "../assets/image/icons/github.svg";
-import gmailIcon from "../assets/image/icons/gmail-svgrepo-com.svg";
-import telegramIcon from "../assets/image/icons/telegram-alt-svgrepo-com.svg";
-import linkedInIcon from "../assets/image/icons/linkedin-svgrepo-com.svg";
+import gmailIcon from "../assets/image/icons/gmail.svg";
+import telegramIcon from "../assets/image/icons/telegram.svg";
+import linkedInIcon from "../assets/image/icons/linkedin.svg";
 
 export const initialState: InitialStateType = {
     main: {
@@ -127,7 +127,7 @@ export const initialState: InitialStateType = {
         data: [
             {
                 id: v1(),
-                title: 'To Do List',
+                title: 'To-Do List',
                 link: '#',
                 description: 'Kobita tumi sopno charini hoye ersest labo met, consectetur adipi ctetur adipisicing eod tempor',
                 img: {
@@ -162,7 +162,7 @@ export const initialState: InitialStateType = {
         {id: v1(), backgroundImage: `url(${githubIcon})`, path: 'https://github.com/zemosamurai'},
         {id: v1(), backgroundImage: `url(${gmailIcon})`, path: 'mailto:zemosamurai@gmail.com'},
         {id: v1(), backgroundImage: `url(${telegramIcon})`, path: 'https://t.me/zemosamurai'},
-        {id: v1(), backgroundImage: `url(${linkedInIcon})`, path: '#'},
+        {id: v1(), backgroundImage: `url(${linkedInIcon})`, path: 'https://www.linkedin.com/in/kim-harokhau-191b00264/'},
     ]
 }
 

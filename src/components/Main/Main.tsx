@@ -14,9 +14,14 @@ export const Main = () => {
                 <div className={s.text}>
                     <h1 className={s.name}>{mainData.firstName} <span>{mainData.lastName}</span></h1>
                     <p className={s.description}>{mainData.description}</p>
-                    <a href='#contact'>
-                        <div className={s.btn}>Get Connected</div>
-                    </a>
+                    <div className={s.btnWrapper}>
+                        <a href='#contact'>
+                            <div className={s.btnGet}>Get Connected</div>
+                        </a>
+                        <a href='#contact'>
+                            <div className={s.btnCv}>Download CV</div>
+                        </a>
+                    </div>
                 </div>
                 <div className={s.photo}>
                     <img src={mainImg} alt="#"/>

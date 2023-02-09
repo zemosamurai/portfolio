@@ -6,14 +6,16 @@ import {AiOutlineMenu, AiOutlineClose} from "react-icons/ai";
 import {Icon} from "../Icon/Icon";
 import { useAppSelector} from "../../bll/store";
 import {FooterType} from "../../bll/app-reducer";
+import {useScrollDirection} from "../../hooks/scrollDirection";
 
 
 export const Header = () => {
     const headerData = useAppSelector<FooterType[]>(state => state.app.headerFooterIcons)
     const [nav, setNav] = useState(false)
+    const scroll = useScrollDirection()
 
     return (
-        <div className={s.header} id={'header'}>
+        <div className={`${s.header} ${scroll === 'down' ? s.hide : ''}`} id={'header'}>
             <div className={`${styleContainer.container} ${s.container}`}>
                 <Nav active={nav} editActive={setNav}/>
 

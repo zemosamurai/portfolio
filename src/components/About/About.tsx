@@ -2,7 +2,7 @@ import React from 'react';
 import s from './About.module.scss'
 import styleContainer from '../../common/styles/Container.module.css'
 import {Title} from "../../common/commonComponents/Title/Title";
-import myImage from '../../assets/image/imgAbout/main1.jpg'
+import myImage from '../../assets/image/imgAbout/portret.jpg'
 import {useAppSelector} from "../../bll/store";
 import {AboutType} from "../../bll/app-reducer";
 
