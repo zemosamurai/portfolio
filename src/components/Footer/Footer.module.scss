@@ -15,12 +15,14 @@
       display: flex;
       column-gap: 30px;
       margin-bottom: 20px;
+      align-items: center;
 
       .icon {
         width: 30px;
         height: 30px;
         background-size: cover;
         background-position: center;
+        transition: 0.2s;
       }
     }
   }

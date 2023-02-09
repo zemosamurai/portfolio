@@ -14,7 +14,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     height: 230px;
     width: 100%;
     background-size: cover;
@@ -54,6 +53,7 @@
       opacity: 0.5;
       text-decoration: none;
       border-radius: 3px;
+      transition: 0.3s;
       @include poppinsText(16px, 600, $mainTextColor);
 
       &:hover {
@@ -66,6 +66,9 @@
 
   .content {
     padding: 28px 35px;
+    @media screen and (max-width: 866px){
+        text-align: center;
+    }
 
     .projectTitle {
       margin-bottom: 10px;

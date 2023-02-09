@@ -11,8 +11,8 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  z-index: 2;
-  transition: transform .1s linear;
+  z-index: 3;
+  transition: transform .3s linear;
 
   .container {
     display: flex;
@@ -31,7 +31,10 @@
     .wrapperIcon {
       border: 1px solid black;
       display: flex;
+      justify-content: flex-end;
+      align-items: center;
       column-gap: 22px;
+      width: 160px;
       @media screen and (max-width: 800px) {
         display: none;
       }
@@ -41,6 +44,12 @@
         height: 20px;
         background-size: cover;
         background-position: center;
+        transition: 0.2s;
+
+        &:hover {
+          width: 30px;
+          height: 30px;
+        }
       }
     }
 
@@ -56,5 +65,7 @@
   }
 }
 
-
+.hide {
+  transform: translateY(-70px);
+}
 
