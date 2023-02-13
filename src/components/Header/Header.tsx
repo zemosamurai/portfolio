@@ -27,7 +27,8 @@ export const Header = () => {
                         id={el.id}
                         path={el.path}
                         imgSrc={el}
-                        className={s.icon}/>
+                        className={s.icon}
+                        />
                     )}
                 </div>
 

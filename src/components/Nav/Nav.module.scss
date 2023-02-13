@@ -8,39 +8,39 @@
   column-gap: 30px;
   z-index: 3;
 
-  & a {
+  a {
     position: relative;
     text-decoration: none;
     @include openSansText(16px, 400, $mainTextColor);
 
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      right: 0;
-      bottom: -7px;
-      width: 0;
-      height: 2px; /* Высота линии */
-      background-color: $primaryColor; /* Цвет подчеркивания при исчезании линии*/
-      transition: width 0.5s; /* Время эффекта */
+    @media screen and (min-width: 600px) {
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: -7px;
+        width: 0;
+        height: 2px; /* Высота линии */
+        background-color: $primaryColor; /* Цвет подчеркивания при исчезании линии*/
+        transition: width 0.5s; /* Время эффекта */
+      }
+      &:hover:after {
+        content: "";
+        width: 100%;
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: -7px;
+        height: 2px; /* Высота линии */
+        background-color: $primaryColor; /* Цвет подчеркивания при появлении линии*/
+        transition: width 0.5s; /* Время эффекта */
+      }
     }
 
-    &:hover:after {
-      content: "";
-      width: 100%;
-      display: block;
-      position: absolute;
-      left: 0;
-      bottom: -7px;
-      height: 2px; /* Высота линии */
-      background-color: $primaryColor; /* Цвет подчеркивания при появлении линии*/
-      transition: width 0.5s; /* Время эффекта */
+    &:hover {
+      color: $primaryColor;
     }
-
-  }
-
-  a:hover {
-    color: $primaryColor;
   }
 
   @media screen and (max-width: 600px) {

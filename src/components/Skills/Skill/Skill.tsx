@@ -8,7 +8,7 @@ type SkillPropsType = {
 
 export const Skill = ({title, img}: SkillPropsType) => {
     return (
-        <div className={s.skill}>
+        <div className={s.skill} >
             <div className={s.icon}>
                 <img src={img} alt="image"/>
             </div>
