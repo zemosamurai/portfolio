@@ -101,8 +101,11 @@
         @media screen and (max-width: 1200px) {
           max-width: 320px;
         }
-        @media screen and (max-width: 420px) {
+        @media screen and (max-width: 500px) {
           max-width: 260px;
+        }
+        @media screen and (max-width: 400px) {
+          max-width: 240px;
         }
       }
     }

@@ -7,6 +7,7 @@ import {ContactsType, dataSendEmailType} from "../../bll/app-reducer";
 import {useFormik} from "formik";
 import CircularProgress from "@mui/material/CircularProgress";
 import {LoadingType, sendEmailFormTC} from "../../bll/send-form-reducer";
+import {Fade} from "react-awesome-reveal";
 
 type ErrorsType = {
     name?: string
@@ -55,42 +56,45 @@ export const Contact = () => {
     })
 
     return (
-        <div className={s.contactBlock} id={'contact'}>
-            <div className={`${styleContainer.container} ${s.container}`}>
-                <Title title={contactData.title} text={contactData.description}/>
-                <form className={s.formBlock} onSubmit={formik.handleSubmit}>
+        <Fade triggerOnce duration={1500}>
+            <div className={s.contactBlock} id={'contact'}>
+                <div className={`${styleContainer.container} ${s.container}`}>
+                    <Title title={contactData.title} text={contactData.description}/>
+                    <form className={s.formBlock} onSubmit={formik.handleSubmit}>
 
-                    <input
-                        placeholder="Your Name"
-                        type="text"
-                        {...formik.getFieldProps('name')}
-                    />
-                    {formik.touched.name && formik.errors.name && <div className={s.error}>{formik.errors.name}</div>}
+                        <input
+                            placeholder="Your Name"
+                            type="text"
+                            {...formik.getFieldProps('name')}
+                        />
+                        {formik.touched.name && formik.errors.name &&
+                            <div className={s.error}>{formik.errors.name}</div>}
 
-                    <input
-                        placeholder="Your E-mail"
-                        type="email"
-                        {...formik.getFieldProps('email')}
-                    />
-                    {formik.touched.email && formik.errors.email &&
-                        <div className={s.error}>{formik.errors.email}</div>}
+                        <input
+                            placeholder="Your E-mail"
+                            type="email"
+                            {...formik.getFieldProps('email')}
+                        />
+                        {formik.touched.email && formik.errors.email &&
+                            <div className={s.error}>{formik.errors.email}</div>}
 
-                    <textarea
-                        placeholder="Write your message here"
-                        {...formik.getFieldProps('message')}
-                    />
-                    {formik.touched.message && formik.errors.message &&
-                        <div className={s.error}>{formik.errors.message}</div>}
+                        <textarea
+                            placeholder="Write your message here"
+                            {...formik.getFieldProps('message')}
+                        />
+                        {formik.touched.message && formik.errors.message &&
+                            <div className={s.error}>{formik.errors.message}</div>}
 
-                    {isLoading === 'loading' &&
-                        <div style={{marginBottom: '10px', top: '40%', textAlign: 'center', width: '100%'}}>
-                            <CircularProgress/>
-                        </div>
-                    }
-                    {isLoading !== 'loading' && <input type="submit" value="Submit Now" className={s.btn}/>}
-                </form>
+                        {isLoading === 'loading' &&
+                            <div style={{marginBottom: '10px', top: '40%', textAlign: 'center', width: '100%'}}>
+                                <CircularProgress/>
+                            </div>
+                        }
+                        {isLoading !== 'loading' && <input type="submit" value="Submit Now" className={s.btn}/>}
+                    </form>
+                </div>
             </div>
-        </div>
+        </Fade>
     );
 };
 

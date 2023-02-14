@@ -38,8 +38,6 @@ export const Header = () => {
                         : <AiOutlineMenu color={'#fff'} size={30}/>
                     }
                 </div>
-
-
             </div>
         </div>
     );
