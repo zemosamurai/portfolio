@@ -4,7 +4,7 @@ import {Nav} from "../Nav/Nav";
 import styleContainer from "../../common/styles/Container.module.css";
 import {AiOutlineMenu, AiOutlineClose} from "react-icons/ai";
 import {Icon} from "../Icon/Icon";
-import { useAppSelector} from "../../bll/store";
+import {useAppSelector} from "../../bll/store";
 import {FooterType} from "../../bll/app-reducer";
 import {useScrollDirection} from "../../hooks/scrollDirection";
 
@@ -23,11 +23,11 @@ export const Header = () => {
 
                 <div className={s.wrapperIcon}>
                     {headerData.map(el => <Icon
-                        key={el.id}
-                        id={el.id}
-                        path={el.path}
-                        imgSrc={el}
-                        className={s.icon}
+                            key={el.id}
+                            id={el.id}
+                            path={el.path}
+                            imgSrc={el}
+                            className={s.icon}
                         />
                     )}
                 </div>

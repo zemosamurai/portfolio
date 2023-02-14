@@ -5,6 +5,7 @@ import {Title} from "../../common/commonComponents/Title/Title";
 import myImage from '../../assets/image/imgAbout/portret.jpg'
 import {useAppSelector} from "../../bll/store";
 import {AboutType} from "../../bll/app-reducer";
+import Tilt from "react-parallax-tilt";
 
 export const About = () => {
     const aboutData = useAppSelector<AboutType>(state => state.app.about)
@@ -14,9 +15,13 @@ export const About = () => {
             <div className={`${styleContainer.container} ${s.container}`}>
                 <Title title={aboutData.title} text={aboutData.description}/>
                 <div className={s.wrapper}>
-                    <div className={s.photo}>
-                        <img src={myImage} alt="#"/>
-                    </div>
+
+                    <Tilt tiltMaxAngleY={5} tiltMaxAngleX={5}>
+                        <div className={s.photo}>
+                            <img src={myImage} alt="#"/>
+                        </div>
+                    </Tilt>
+
                     <div className={s.aboutMe}>
                         <h3 className={s.title}>About Me</h3>
                         <p className={s.text}>{aboutData.textMe}</p>

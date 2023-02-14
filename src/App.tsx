@@ -7,6 +7,7 @@ import {Projects} from "./components/Projects/Projects";
 import {Contact} from "./components/Contact/Contact";
 import {Footer} from "./components/Footer/Footer";
 import {ViewStatusRequest} from "./common/ViewStatusRequest/ViewStatusRequest";
+import React from "react";
 
 function App() {
     return (
