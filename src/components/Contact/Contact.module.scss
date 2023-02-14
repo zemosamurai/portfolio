@@ -40,11 +40,18 @@
         border: 1px solid rgba(255, 255, 255, .3);
         border-radius: 8px;
         @include openSansText(18px, 400, $mainTextColor);
+        @media screen and (max-width: 700px) {
+          outline: none;
+        }
 
         &:hover {
           border: 1px solid white;
         }
+        &:focus {
+          outline: 2px solid white;
+        }
       }
+
 
       .error {
         margin-top: -15px;
@@ -60,8 +67,12 @@
         border-radius: 8px;
         @include openSansText(18px, 400, $mainTextColor);
 
+
         &:hover {
           border: 1px solid white;
+        }
+        &:focus {
+          outline: 2px solid white;
         }
       }
 
