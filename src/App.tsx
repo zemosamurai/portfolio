@@ -8,19 +8,23 @@ import {Contact} from "./components/Contact/Contact";
 import {Footer} from "./components/Footer/Footer";
 import {ViewStatusRequest} from "./common/ViewStatusRequest/ViewStatusRequest";
 import React from "react";
+import {ParticleBackground} from "./common/ParticleBackground/ParticleBackground";
 
 function App() {
     return (
-        <div className="App">
-            <ViewStatusRequest/>
-            <Header/>
-            <Main/>
-            <Skills/>
-            <About/>
-            <Projects/>
-            <Contact/>
-            <Footer/>
-        </div>
+        <>
+            <ParticleBackground/>
+            <div className="App">
+                <ViewStatusRequest/>
+                <Header/>
+                <Main/>
+                <Skills/>
+                <About/>
+                <Projects/>
+                <Contact/>
+                <Footer/>
+            </div>
+        </>
     );
 }
 

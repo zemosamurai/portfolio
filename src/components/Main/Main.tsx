@@ -14,7 +14,7 @@ export const Main = () => {
     const windowSize = useWindowSize()
 
     return (
-        <Fade triggerOnce duration={1500}>
+        <Fade triggerOnce duration={0}>
             <div className={s.mainBlock} id={'main'}>
                 <div className={`${styleContainer.container} ${s.container}`}>
                     <div className={s.text}>
