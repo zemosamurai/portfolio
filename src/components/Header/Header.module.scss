@@ -43,17 +43,14 @@
       }
 
       .icon {
-        width: 20px;
-        height: 20px;
-        background-size: cover;
-        background-position: center;
-        transition: 0.2s;
+        width: 21px;
+        height: 21px;
+        transition: 0.4s;
 
         &:hover {
-          width: 30px;
-          height: 30px;
+          fill: $primaryColor;
+          transform: scale(1.5) rotate(360deg);
         }
-
       }
     }
 
@@ -70,7 +67,6 @@
 }
 
 
-
 .hide {
   transform: translateY(-70px);
   @media screen and (max-width: 600px) {
@@ -78,6 +74,3 @@
   }
 }
 
-.transparent {
-  background: none;
-}
