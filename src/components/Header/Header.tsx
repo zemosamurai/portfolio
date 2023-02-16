@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import s from './Header.module.scss'
 import {Nav} from "../Nav/Nav";
 import styleContainer from "../../common/styles/Container.module.css";
@@ -10,6 +10,12 @@ import {useScrollDirection} from "../../hooks/scrollDirection";
 export const Header = () => {
     const [nav, setNav] = useState(false)
     const scroll = useScrollDirection()
+
+    useEffect(() => {
+        nav && (document.body.style.overflow = 'hidden')
+        !nav && (document.body.style.overflow = 'unset')
+    }, [nav]) // отключает прокрутку при открытом меню
+
 
     return (
         <div className={`${s.header} ${scroll === 'down' ? s.hide : ''}`} id={'header'}>
