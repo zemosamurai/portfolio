@@ -125,7 +125,7 @@ export const initialState: InitialStateType = {
                 id: v1(),
                 title: 'To-Do List',
                 link: '#',
-                description: 'Kobita tumi sopno charini hoye ersest labo met, consectetur adipi ctetur adipisicing eod tempor',
+                description: 'Create, edit and delete TO-DO Lists, manage tasks that can be customized for you and your team',
                 img: {
                     backgroundImage: `url(${todoImg})`
                 }
@@ -134,7 +134,7 @@ export const initialState: InitialStateType = {
                 id: v1(),
                 title: 'Social Network',
                 link: '#',
-                description: 'Kobita tumi sopno charini hoye ersest labo met, consectetur adipi ctetur adipisicing eod tempor',
+                description: 'A social network that implements adding and deleting friends, authorization, sending messages...',
                 img: {
                     backgroundImage: `url(${socialImg})`,
                 }

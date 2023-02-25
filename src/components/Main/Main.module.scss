@@ -11,6 +11,9 @@
       row-gap: 40px;
       text-align: center;
     }
+    @media screen and (max-width: 465px) {
+      row-gap: 30px;
+    }
 
     .text {
       .name {
